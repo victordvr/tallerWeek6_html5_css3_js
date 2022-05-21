@@ -1,0 +1,12 @@
+a{
+    text-decoration: none;
+}
+.caja-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tabla-multiplicar{
+    display: flex;
+    flex-direction: column;
+}

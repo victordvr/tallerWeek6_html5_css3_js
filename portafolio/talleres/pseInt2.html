@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/portafolioStyle.css">
+    <script defer src="../js/portafolioScript.js"></script>
+    <title>PSeInt2 Condicionales</title>
+</head>
+<body class="container">
+    <!------------INICIA NAVBAR------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="java.html">JAVA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt1.html">PSeInt1: Variables e Impresión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt2.html">PSeInt2: Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt3.html">PSeInt3: Ciclos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt4.html">PSeInt4: Arreglos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt5.html">PSeInt5: Funciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../index.html">MI HOJA DE VIDA</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!--------------FIN NAVBAR-------------->
+    <h1>Condicionales</h1>
+<!--------------INICIA ACCORDION---------------->
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Punto #1
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales1
+	
+	definir age Como Entero;
+	
+	escribir "Ingresa tu edad:";
+	leer age;
+	
+	SI age >= 18 Entonces
+		escribir "Usted es mayor de edad.";
+	FinSi
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales1.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Punto #2
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales2
+	
+	definir age Como Entero;
+	
+	escribir "Ingresa tu edad:";
+	leer age;
+	
+	si age < 18 Entonces
+		escribir "Usted aún es un niño(a).";
+	FinSi
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales2.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Punto #3
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, 
+                        entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta.
+                        Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, 
+                        por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</strong> 
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales3
+	
+	definir nombre, apellidos Como Caracter;
+	definir edad Como Entero;
+	
+	escribir "Ingresa primero tu nombre:";
+	leer nombre;
+	escribir "Ingresa tus apellidos:";
+	leer apellidos;
+	escribir "¿Qué edad tienes?";
+	leer edad;
+	Limpiar Pantalla;
+	
+	SI (edad >= 18) Entonces
+		escribir nombre, " ", apellidos, " usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+	SiNo
+		escribir nombre, " ", apellidos, " usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";
+	FinSi
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales3.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Punto #4
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación
+                         que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, 
+                         consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar 
+                         daños u otra novedad sobre la película.</strong> 
+<pre>
+Proceso condicionales4
+	
+	definir usuario Como Caracter;
+	definir pelicula, novedad Como Caracter;
+	definir opcion Como Entero;
+	
+	escribir "Ingresa tu usuario:";
+	leer usuario;
+	Limpiar Pantalla;
+	
+	escribir usuario, ", bienvenid@ a nuestra video tienda virtual.";
+	escribir "Elige una opción:";
+	escribir "1. Consultar películas disponibles.";
+	escribir "2. Alquilar película.";
+	escribir "3. Recibir película en la video tienda física.";
+	escribir "4. Comentarios, novedades o reporte de daño de la película.";
+	escribir "5. Salir.";
+	
+	leer opcion;
+	Limpiar Pantalla;
+	Segun opcion Hacer
+		1:
+			escribir "Busca la película para consultar disponibilidad:";
+			leer pelicula;
+		2:
+			escribir "Prepara las crispetas!";
+			escribir "Película confirmada para: ", usuario;
+		3:
+			escribir "La película se entregará en la video tienda física.";
+			escribir "Si lo prefieres, se puede entregar a domicilio por un costo adicional.";
+		4:
+			escribir "Escribe las novedades presentadas:";
+			leer novedad;
+		5:
+			escribir "Gracias por visitarnos!";
+		De Otro Modo:
+			escribir "Elige una opción existente";
+	FinSegun
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales4.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Punto #5
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes
+                         y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, 
+                         se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</strong>
+<pre>
+Proceso condicionales5
+	
+	definir usuario Como Caracter;
+	definir producto, productoPrecio Como Caracter;
+	definir opcion Como Entero;
+	
+	escribir "Ingresa tu nombre:";
+	leer usuario;
+	Limpiar Pantalla;
+	
+	escribir usuario, ", bienvenid@ a droguería Mi salud";
+	escribir "Elige una opción:";
+	escribir "1. Compra de producto";
+	escribir "2. Consulta de precios";
+	escribir "3. Devoluciones";
+	escribir "4. Salir.";
+	
+	leer opcion;
+	Limpiar Pantalla;
+	
+	segun opcion hacer
+		1:
+			escribir "Busca el producto que deseas:";
+			leer producto;
+			Limpiar Pantalla;
+			escribir producto, " tiene las siguientes especificaciones: abc.";
+		2:
+			escribir "Busca el producto a consultar precio:";
+			leer productoPrecio;
+			Limpiar Pantalla;
+			escribir productoPrecio, " tiene un costo de xx COP.";
+		3:
+			escribir "En este momento esta opción virtual está en mantenimiento, por favor comunícate a la línea directa de devoluciones 604XXXXXXX";
+		4:
+			escribir "Gracias por visitar droguería Mi salud, siempre será un gusto.";
+		De Otro Modo:
+			escribir "Seleccione una opción existente.";
+	FinSegun
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales5.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Punto #6
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita 
+                        registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+                        También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios 
+                        repuestos en la motocicleta al entregarla.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales6
+	
+	definir mecanico, servicio Como Caracter;
+	definir cliente, documento, moto, observacionIn, observacionOut Como Caracter;
+	definir cilindraje Como Entero;
+	definir opcion Como Entero;
+	
+	escribir "Registro de servicios El Maquinista";
+	escribir "Menú:";
+	escribir "1. Registro de ingreso";
+	escribir "2. Registro de salida";
+	escribir "3. Búsqueda de orden de trabajo por documento de cliente";
+	escribir "0. Salir";
+	
+	leer opcion;
+	Limpiar Pantalla;
+	Segun opcion Hacer
+		1:
+			escribir "Registro de ingreso";
+			escribir "Cliente:";
+			leer cliente;
+			escribir "Documento de identificación:";
+			leer documento;
+			escribir "Moto: marca y modelo:";
+			leer moto;
+			escribir "Cilindraje:";
+			leer cilindraje;
+			escribir "Observaciones:";
+			leer observacionIn;
+		2:
+			escribir "Registro de salida";
+			escribir "Mecánico que realizó el servicio:";
+			leer mecanico;
+			escribir "Servicios realizados, mencionar repuestos cambiados";
+			leer servicio;
+			Escribir "Observaciones adicionales";
+			leer observacionOut;
+		3:
+			escribir "Ingrese identificación del cliente para buscar el estado de servicio:";
+			leer documento;
+		0:
+			escribir "Se cerró el menú.";
+		De Otro Modo:
+			escribir "Ingresa una opción existente.";
+	FinSegun
+	
+	
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales6.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------------------------------------------------>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Punto #7
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos 
+                        y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra 
+                        (bajo peso, normal, sobrepeso y obeso).</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales7
+	
+	definir imc, peso, estatura Como Real;
+	
+	escribir "Calculadora IMC";
+	escribir "Peso [kg]:";
+	leer peso;
+	escribir "Estatura [m]:";
+	leer estatura;
+	Limpiar Pantalla;
+	
+	imc <- peso/(estatura^2);
+	escribir "Su Índice de Masa Corporal es: ", imc;
+	
+	si imc < 18.5 Entonces
+		escribir "Bajo peso";
+	FinSi
+	si 18.5 <= imc Y imc <= 24.9 Entonces
+		Escribir "Peso normal";
+	FinSi
+	si 25.0 <= imc Y imc <= 29.9 Entonces
+		escribir "Sobrepeso";
+	FinSi
+	si imc >= 30.0 Entonces
+		Escribir "Obesidad";
+	FinSi
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales7.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Punto #8
+                </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto 
+                        a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). 
+                        Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales8
+	
+	definir sabor, decoraciones Como Caracter;
+	definir tortasDisponibles, tortasVendidas, precio, total, porciones Como Entero;
+	definir opcion Como Entero;
+	
+	tortasDisponibles <- 15;
+	
+	escribir "Menú:";
+	escribir "1. Tortas disponibles";
+	escribir "2. Registro de pedido";
+	escribir "3. Registro de venta";
+	escribir "0. Salir";
+	
+	leer opcion;
+	Limpiar Pantalla;
+	Segun opcion hacer
+		1:
+			escribir "Tortas disponibles: ", tortasDisponibles;
+		2:
+			escribir "Registrar pedido";
+			escribir "Sabor:";
+			leer sabor;
+			escribir "Cantidad de porciones:";
+			leer porciones;
+			escribir "Decoraciones:";
+			leer decoraciones;
+		3:
+			escribir "Registrar venta";
+			escribir "Tortas disponibles: ", tortasDisponibles;
+			escribir "Cantidad de tortas vendidas: ";
+			leer tortasVendidas;
+			escribir "Precio por torta COP:";
+			leer precio;
+			total <- tortasVendidas * precio;
+			escribir "Total: ", total;
+		0:
+			escribir "Salir de la aplicación";
+		De Otro Modo:
+			escribir "Elija una opción existente";
+	FinSegun
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales8.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                Punto #9
+                </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere 
+                        una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea 
+                        calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales9
+	
+	definir area Como Real;
+	definir base, altura, baseMayor Como Real;
+	definir opcion Como Entero;
+	
+	escribir "Calculadora de áreas geométricas";
+	escribir "1. Calcular área de un triángulo";
+	escribir "2. Calcular área de un rectángulo";
+	escribir "3. Calcular área de un trapecio";
+	escribir "0. Salir";
+	
+	leer opcion;
+	Limpiar Pantalla;
+	
+	segun opcion hacer
+		1:
+			escribir "Área del triángulo";
+			escribir "Base:";
+			leer base;
+			escribir "Altura:";
+			leer altura;
+			area <- (base * altura)/2;
+			escribir "Área del triángulo: ", area;
+		2:
+			escribir "Área del rectángulo";
+			escribir "Base:";
+			leer base;
+			escribir "Altura:";
+			leer altura;
+			area <- base * altura;
+			escribir "Área del rectángulo: ", area;
+		3:
+			escribir "Área del trapecio";
+			escribir "Base menor:";
+			leer base;
+			escribir "Base mayor:";
+			leer baseMayor;
+			escribir "Altura:";
+			leer altura;
+			area <- ((base + baseMayor) * altura)/2;
+			escribir "Área del trapecio: ", area;
+		0:
+			escribir "Salió de la aplicación";
+		De Otro Modo:
+			escribir "Elige una opción existente";
+	FinSegun
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales9.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                Punto #10
+                </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; 
+                        por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o 
+                        consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso condicionales10
+	
+	definir usuario, clave Como Caracter;
+	definir ingreso, retiro, saldo Como Real;
+	definir opcion Como Entero;
+	
+	escribir "Bienvenid@ a su Banco fiel";
+	escribir "Ingresa tu usuario:";
+	leer usuario;
+	escribir "Ingresa tu clave:";
+	leer clave;
+	Limpiar Pantalla;
+	
+	escribir "¿Qué deseas realizar hoy?";
+	escribir "1. Depositar dinero";
+	escribir "2. Retirar dinero";
+	escribir "3. Consultar saldo";
+	escribir "0. Salir";
+	
+	leer opcion;
+	Limpiar Pantalla;
+	saldo <- 1000000;
+	
+	segun opcion hacer
+		1:
+			escribir "Depositar dinero";
+			escribir "Monto a depositar:";
+			leer ingreso;
+			si ingreso > 0 Entonces
+				saldo <- saldo + ingreso;
+				escribir "Depositaste: $", ingreso, " COP";
+				escribir "Saldo actual: $", saldo, " COP";
+			SiNo
+				escribir "Ingresa un valor correcto";
+			FinSi
+		2:
+			escribir "Retiro de dinero";
+			escribir "Monto a retirar:";
+			leer retiro;
+			si retiro <= saldo Entonces
+				saldo <- saldo - retiro;
+				escribir "Retiraste $", retiro, " COP";
+				escribir "Saldo actual: $", saldo, " COP";
+			SiNo
+				escribir "Saldo insuficiente";
+				escribir "Saldo: $", saldo, " COP";
+			FinSi
+		3:
+			escribir "Tu saldo es de: $", saldo, " COP";
+		0:
+			escribir "Cerró sesión";
+		De Otro Modo:
+			escribir "Elige una opción existente";
+	FinSegun
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller2/taller2Condicionales/condicionales10.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+<!--------------FIN ACCORDION---------------->
+
+
+<!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/portafolioStyle.css">
+    <script defer src="../js/portafolioScript.js"></script>
+    <title>PSeInt5 Funciones</title>
+</head>
+<body class="container">
+    <!------------INICIA NAVBAR------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="java.html">JAVA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt1.html">PSeInt1: Variables e Impresión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt2.html">PSeInt2: Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt3.html">PSeInt3: Ciclos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt4.html">PSeInt4: Arreglos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt5.html">PSeInt5: Funciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../index.html">MI HOJA DE VIDA</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!--------------FIN NAVBAR-------------->
+    <h1>Funciones</h1> <br>
+    <strong>
+        1. Organizar todos los puntos del taller de condicionales en modo funciones. <br>
+        <hr>
+    </strong>
+    
+<!--------------INICIA ACCORDION---------------->
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Función Punto #1 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: 
+                        Usted es mayor de edad.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+
+subProceso	RegistroEdad()
+	Definir edad como Entero;
+	Escribir "Ingresa tu edad:";
+	leer edad;
+	SI edad >= 18 Entonces
+		Escribir "Usted es mayor de edad.";
+	FinSi
+FinSubProceso
+
+Proceso condicionales1
+	RegistroEdad();
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales1.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Función Punto #2 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+
+subProceso	RegistroEdad()
+	Definir edad como Entero;
+	Escribir "Ingresa tu edad:";
+	leer edad;
+	SI edad < 18 Entonces
+		Escribir "Usted aún es un niño(a)";
+	FinSi
+FinSubProceso
+
+Proceso condicionales2
+	RegistroEdad();
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales2.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Función Punto #3 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, 
+                        entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta.
+                        Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, 
+                        por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</strong> 
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+subProceso nombre <- IngresoNombre()
+	Definir nombre como caracter;
+	Escribir "Ingresa primero tu nombre: " sin saltar;
+	leer nombre;
+FinSubProceso
+
+subProceso apellidos <- IngresoApellidos()
+	Definir apellidos como caracter;
+	Escribir "Ingresa tus apellidos: " sin saltar;
+	leer apellidos;
+FinSubProceso
+
+subProceso	edad <- RegistroEdad()
+	Definir edad como Entero;
+	Escribir "Ingresa tu edad:";
+	leer edad;
+FinSubProceso
+
+subProceso ComparacionEdad(name, lastName, age)
+	si age >= 18 Entonces
+		Escribir name, " ", lastName, " usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+	SiNo
+		Escribir name, " ", lastName, " usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuélvase a su casa.";
+	FinSi
+	
+FinSubProceso
+
+Proceso condicionales3
+	definir nombre, apellidos Como Caracter;
+	definir edad Como Entero;
+	
+	nombre <- IngresoNombre();
+	apellidos <- IngresoApellidos();
+	edad <- RegistroEdad();
+	limpiar pantalla;
+	
+	ComparacionEdad(nombre, apellidos, edad);
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales3.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Función Punto #4 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación
+                         que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, 
+                         consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar 
+                         daños u otra novedad sobre la película.</strong> 
+<pre>
+subProceso usuario <- IngresoUsuario()
+	Definir usuario Como Caracter;
+	escribir "Ingresa tu usuario: " Sin Saltar;
+	leer usuario;
+FinSubProceso
+
+SubProceso Menu(usuario)
+	escribir usuario, ", bienvenid@ a nuestra video tienda virtual.";
+	escribir "Elige una opción:";
+	escribir "1. Consultar películas disponibles.";
+	escribir "2. Alquilar película.";
+	escribir "3. Recibir película en la video tienda física.";
+	escribir "4. Comentarios, novedades o reporte de daño de la película.";
+	escribir "5. Salir.";
+FinSubProceso
+
+SubProceso Seleccion(opcion, usuario)
+	Definir pelicula, novedad Como Caracter;
+	Segun opcion Hacer
+		1:
+			escribir "Busca la película para consultar disponibilidad:";
+			leer pelicula;
+		2:
+			escribir "Prepara las crispetas!";
+			escribir "Película confirmada para: ", usuario;
+		3:
+			escribir "La película se entregará en la video tienda física.";
+			escribir "Si lo prefieres, se puede entregar a domicilio por un costo adicional.";
+		4:
+			escribir "Escribe las novedades presentadas:";
+			leer novedad;
+		5:
+			escribir "Gracias por visitarnos!";
+		De Otro Modo:
+			escribir "Elige una opción existente";
+	FinSegun
+	
+	
+FinSubProceso
+
+Proceso condicionales4
+	
+	definir usuario Como Caracter;
+	definir opcion Como Entero;
+	
+	usuario <- IngresoUsuario();
+	Limpiar Pantalla;
+	
+	Menu(usuario);
+	
+	leer opcion;
+	Limpiar Pantalla;
+	Seleccion(opcion, usuario);
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales4.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Función Punto #5 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes
+                         y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, 
+                         se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</strong>
+<pre>
+subProceso usuario <- IngresoNombre()
+	Definir usuario Como Caracter;
+	escribir "Ingresa tu nombre: " Sin Saltar;
+	leer usuario;
+FinSubProceso
+
+SubProceso Menu(usuario)
+	escribir usuario, ", bienvenid@ a droguería Mi salud";
+	escribir "Elige una opción:";
+	escribir "1. Compra de producto";
+	escribir "2. Consulta de precios";
+	escribir "3. Devoluciones";
+	escribir "4. Salir.";
+FinSubProceso
+
+SubProceso Seleccion(opcion)
+	definir producto, productoPrecio como caracter;
+	segun opcion hacer
+		1:
+			escribir "Busca el producto que deseas:";
+			leer producto;
+			Limpiar Pantalla;
+			escribir producto, " tiene las siguientes especificaciones: abc.";
+		2:
+			escribir "Busca el producto a consultar precio:";
+			leer productoPrecio;
+			Limpiar Pantalla;
+			escribir productoPrecio, " tiene un costo de xx COP.";
+		3:
+			escribir "En este momento esta opción virtual está en mantenimiento, por favor comunícate a la línea directa de devoluciones 604XXXXXXX";
+		4:
+			escribir "Gracias por visitar droguería Mi salud, siempre será un gusto.";
+		De Otro Modo:
+			escribir "Seleccione una opción existente.";
+	FinSegun
+	
+	
+FinSubProceso
+
+Proceso condicionales5
+	
+	definir usuario Como Caracter;
+	definir opcion Como Entero;
+	
+	usuario <- IngresoNombre();
+	Limpiar Pantalla;
+	
+	Menu(usuario);
+	
+	leer opcion;
+	Limpiar Pantalla;
+	
+	Seleccion(opcion);
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales5.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Función Punto #6 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita 
+                        registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+                        También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios 
+                        repuestos en la motocicleta al entregarla.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+subProceso Menu()
+	escribir "Registro de servicios El Maquinista";
+	escribir "Menú:";
+	escribir "1. Registro de ingreso";
+	escribir "2. Registro de salida";
+	escribir "3. Búsqueda de orden de trabajo por documento de cliente";
+	escribir "0. Salir";
+FinSubProceso
+
+SubProceso Seleccion(opcion)
+	definir mecanico, servicio, observacionOut Como Caracter;
+	definir cliente, documento, moto, observacionIn Como Caracter;
+	definir cilindraje Como Entero;
+	Segun opcion Hacer
+		1:
+			escribir "Registro de ingreso";
+			escribir "Cliente:";
+			leer cliente;
+			escribir "Documento de identificación:";
+			leer documento;
+			escribir "Moto: marca y modelo:";
+			leer moto;
+			escribir "Cilindraje:";
+			leer cilindraje;
+			escribir "Observaciones:";
+			leer observacionIn;
+		2:
+			escribir "Registro de salida";
+			escribir "Mecánico que realizó el servicio:";
+			leer mecanico;
+			escribir "Servicios realizados, mencionar repuestos cambiados";
+			leer servicio;
+			Escribir "Observaciones adicionales";
+			leer observacionOut;
+		3:
+			escribir "Ingrese identificación del cliente para buscar el estado de servicio:";
+			leer documento;
+		0:
+			escribir "Se cerró el menú.";
+		De Otro Modo:
+			escribir "Ingresa una opción existente.";
+	FinSegun
+FinSubProceso
+
+Proceso condicionales6
+	definir opcion Como Entero;
+	
+	Menu();
+	
+	leer opcion;
+	Limpiar Pantalla;
+	Seleccion(opcion);
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales6.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------------------------------------------------>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Función Punto #7 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos 
+                        y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra 
+                        (bajo peso, normal, sobrepeso y obeso).</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+SubProceso peso <- LeerPeso()
+	Definir peso como real;
+	Escribir "Peso [kg]: " sin saltar;
+	leer peso;
+FinSubProceso
+
+SubProceso estatura <- LeerEstatura()
+	Definir estatura como real;
+	Escribir "Estatura [m]: " sin saltar;
+	leer estatura;
+FinSubProceso
+
+SubProceso imc <- CalcularIMC(peso, estatura)
+	definir imc Como Real;
+	imc <- peso/(estatura^2);
+	escribir "Su Índice de Masa Corporal es: ", imc;
+FinSubProceso
+
+SubProceso TablaIMC(imc)
+	si imc < 18.5 Entonces
+		escribir "Bajo peso";
+	FinSi
+	si 18.5 <= imc Y imc <= 24.9 Entonces
+		Escribir "Peso normal";
+	FinSi
+	si 25.0 <= imc Y imc <= 29.9 Entonces
+		escribir "Sobrepeso";
+	FinSi
+	si imc >= 30.0 Entonces
+		Escribir "Obesidad";
+	FinSi
+FinSubProceso
+
+Proceso condicionales7
+	
+	definir imc, peso, estatura Como Real;
+	
+	escribir "Calculadora IMC";
+	peso <- LeerPeso();
+	estatura <- LeerEstatura();
+	Limpiar Pantalla;
+	
+	imc <- CalcularIMC(peso, estatura);
+	TablaIMC(imc);
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales7.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    Función Punto #8 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto 
+                        a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). 
+                        Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+SubProceso Menu()
+	escribir "Menú:";
+	escribir "1. Tortas disponibles";
+	escribir "2. Registro de pedido";
+	escribir "3. Registro de venta";
+	escribir "0. Salir";
+FinSubProceso
+
+SubProceso Seleccion(opcion, tortasDisponibles)
+	definir sabor, decoraciones como caracter;
+	definir porciones, tortasVendidas, precio, total como entero;
+	Segun opcion hacer
+		1:
+			escribir "Tortas disponibles: ", tortasDisponibles;
+		2:
+			escribir "Registrar pedido";
+			escribir "Sabor:";
+			leer sabor;
+			escribir "Cantidad de porciones:";
+			leer porciones;
+			escribir "Decoraciones:";
+			leer decoraciones;
+		3:
+			escribir "Registrar venta";
+			escribir "Tortas disponibles: ", tortasDisponibles;
+			escribir "Cantidad de tortas vendidas: ";
+			leer tortasVendidas;
+			escribir "Precio por torta COP:";
+			leer precio;
+			total <- tortasVendidas * precio;
+			escribir "Total: ", total;
+		0:
+			escribir "Salir de la aplicación";
+		De Otro Modo:
+			escribir "Elija una opción existente";
+	FinSegun
+FinSubProceso
+
+Proceso condicionales8
+	definir tortasDisponibles Como Entero;
+	definir opcion Como Entero;
+	
+	tortasDisponibles <- 15;
+	Menu();
+	leer opcion;
+	Limpiar Pantalla;
+	Seleccion(opcion, tortasDisponibles);
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales8.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    Función Punto #9 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere 
+                        una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea 
+                        calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+SubProceso Menu()
+	escribir "Calculadora de áreas geométricas";
+	escribir "1. Calcular área de un triángulo";
+	escribir "2. Calcular área de un rectángulo";
+	escribir "3. Calcular área de un trapecio";
+	escribir "0. Salir";
+FinSubProceso
+
+SubProceso AreaTriangulo()
+	definir triangulo como real;
+	definir base, altura como real;
+	escribir "Área del triángulo";
+	escribir "Base: " Sin Saltar;
+	leer base;
+	escribir "Altura: " Sin Saltar;
+	leer altura;
+	triangulo <- (base * altura)/2;
+	escribir "Área del triángulo: ", triangulo;
+FinSubProceso
+
+SubProceso AreaRectangulo()
+	definir rectangulo como real;
+	definir base, altura como real;
+	escribir "Área del rectángulo";
+	escribir "Base: " Sin Saltar;
+	leer base;
+	escribir "Altura: " Sin Saltar;
+	leer altura;
+	rectangulo <- base * altura;
+	escribir "Área del rectángulo: ", rectangulo;
+FinSubProceso
+
+SubProceso AreaTrapecio()
+	definir trapecio como real;
+	definir base, baseMayor, altura como real;
+	escribir "Área del trapecio";
+	escribir "Base menor: " Sin Saltar;
+	leer base;
+	escribir "Base mayor: " Sin Saltar;
+	leer baseMayor;
+	escribir "Altura: " Sin Saltar;
+	leer altura;
+	trapecio <- ((base + baseMayor) * altura)/2;
+	escribir "Área del trapecio: ", trapecio;
+FinSubProceso
+
+Proceso condicionales9
+	
+	definir area Como Real;
+	definir base, altura, baseMayor Como Real;
+	definir opcion Como Entero;
+	
+	Menu();
+	leer opcion;
+	Limpiar Pantalla;
+	
+	segun opcion hacer
+		1:
+			AreaTriangulo();
+		2:
+			AreaRectangulo();
+		3:
+			AreaTrapecio();
+		0:
+			escribir "Salió de la aplicación";
+		De Otro Modo:
+			escribir "Elige una opción existente";
+	FinSegun
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales9.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    Función Punto #10 del Taller de Condicionales
+                </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; 
+                        por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o 
+                        consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+SubProceso IngresoUsuario()
+	definir usuario Como Caracter;
+	Escribir "Ingresa tu usuario: " Sin Saltar;
+	leer usuario;
+FinSubProceso
+
+SubProceso IngresoClave()
+	definir clave Como Caracter;
+	Escribir "Ingresa tu clave: " Sin Saltar;
+	leer clave;
+FinSubProceso
+
+SubProceso Menu()
+	escribir "¿Qué deseas realizar hoy?";
+	escribir "1. Depositar dinero";
+	escribir "2. Retirar dinero";
+	escribir "3. Consultar saldo";
+	escribir "0. Salir";
+FinSubProceso
+
+SubProceso saldo <- Deposito(saldo)
+	Definir ingreso como real;
+	escribir "Depositar dinero";
+	escribir "Monto a depositar:";
+	leer ingreso;
+	si ingreso > 0 Entonces
+		saldo <- saldo + ingreso;
+		escribir "Depositaste: $", ingreso, " COP";
+		escribir "Saldo actual: $", saldo, " COP";
+	SiNo
+		escribir "Ingresa un valor correcto";
+	FinSi
+FinSubProceso
+
+SubProceso saldo <- RetiroDinero(saldo)
+	definir retiro como real;
+	escribir "Retiro de dinero";
+	escribir "Monto a retirar:";
+	leer retiro;
+	si retiro <= saldo Entonces
+		saldo <- saldo - retiro;
+		escribir "Retiraste $", retiro, " COP";
+		escribir "Saldo actual: $", saldo, " COP";
+	SiNo
+		escribir "Saldo insuficiente";
+		escribir "Saldo: $", saldo, " COP";
+	FinSi
+FinSubProceso
+
+SubProceso ImpresionSaldo(saldo)
+	escribir "Tu saldo es de: $", saldo, " COP";
+FinSubProceso
+
+Proceso condicionales10
+	definir saldo Como Real;
+	definir opcion Como Entero;
+	
+	escribir "Bienvenid@ a su Banco fiel";
+	IngresoUsuario();
+	IngresoClave();
+	Limpiar Pantalla;
+	Menu();
+	
+	leer opcion;
+	Limpiar Pantalla;
+	saldo <- 1000000;
+	
+	segun opcion hacer
+		1:
+			saldo <- Deposito(saldo);
+		2:
+			saldo <- RetiroDinero(saldo);
+		3:
+			ImpresionSaldo(saldo);
+		0:
+			escribir "Cerró sesión";
+		De Otro Modo:
+			escribir "Elige una opción existente";
+	FinSegun
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/condicionales/funcionCondicionales10.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+<!--------------FIN ACCORDION CONDICIONALES---------------->
+    <strong>
+        2. Organizar los puntos 6, 7 y 8 del taller de ciclos en modo funciones. <br>
+        <hr>
+    </strong>
+
+<!-------------------INICIO ACCORDION TALLER DE CICLOS-------------------------------------->
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOnec">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnec" aria-expanded="false" aria-controls="collapseOnec">
+                Función Punto #6 del Taller de Ciclos
+                </button>
+            </h2>
+            <div id="collapseOnec" class="accordion-collapse collapse" aria-labelledby="headingOnec" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. 
+                        Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando 
+                        que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar 
+                        cuando el usuario así lo indique.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+
+SubProceso Menu()
+	escribir "CONTACTOS";
+	escribir "1. Añadir contacto";
+	escribir "2. Buscar contacto";
+	escribir "3. Eliminar contacto";
+	escribir "0. Salir";
+	Escribir "";
+	escribir "Elige una opción:";
+FinSubProceso
+
+SubProceso AgregarContacto()
+	definir nombre, telefono, organizacion como caracter;
+	escribir "Añadir contacto";
+	escribir "Nombre:";
+	leer nombre;
+	escribir "Teléfono:";
+	leer telefono;
+	SI	telefono = "315" Entonces
+		Escribir "Ya tienes este número telefónico agregado";
+	sino
+		escribir "Organización:";
+		leer organizacion;
+		escribir "Contacto agregado exitosamente";
+	FinSi
+FinSubProceso
+
+SubProceso BuscarContacto()
+	definir nombre Como Caracter;
+	Escribir "Buscar contacto: " sin saltar;
+	leer nombre;
+FinSubProceso
+
+SubProceso EliminarContacto()
+	definir nombre Como Caracter;
+	Escribir "Ingresa nombre de contacto a eliminar: " sin saltar;
+	leer nombre;
+	Escribir "Contacto eliminado";
+FinSubProceso
+
+Proceso ciclos6
+	definir nombre, telefono, organizacion Como Caracter;
+	definir opcion Como Entero;
+	
+	Repetir
+		Menu();
+		leer opcion;
+		Limpiar Pantalla;
+		
+		segun opcion hacer
+			1:
+				AgregarContacto();
+			2:
+				BuscarContacto;
+			3:
+				EliminarContacto();
+		FinSegun
+		
+	Hasta Que opcion = 0;
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/ciclos/funcionCiclos6.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwoc">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoc" aria-expanded="false" aria-controls="collapseTwoc">
+                Función Punto #7 del Taller de Ciclos
+                </button>
+            </h2>
+            <div id="collapseTwoc" class="accordion-collapse collapse" aria-labelledby="headingTwoc" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar 
+                        los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del 
+                        cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y 
+                        consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el 
+                        parqueadero solo puede almacenar máximo 5 vehículos.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+
+SubProceso Menu()
+	escribir "PARQUEADERO EL GUARDIÁN";
+	escribir "1. Ingreso de vehículo";
+	escribir "2. Salida de vehículo";
+	escribir "3. Consulta de vehículo";
+	escribir "0. Salir";
+	escribir "";
+	escribir "Elija una opción:";
+FinSubProceso
+
+SubProceso disponibilidad <- IngresoVehiculo(disponibilidad)
+	Definir nombre, telefono, marca, placa como caracter;
+	escribir "INGRESO DE VEHÍCULO";
+	Escribir "Parqueaderos disponibles: ", disponibilidad;
+	escribir "Nombre del cliente:";
+	leer nombre;
+	escribir "Teléfono:";
+	leer telefono;
+	escribir "Marca del vehículo:";
+	leer marca;
+	escribir "Placa del vehículo:";
+	leer placa;
+	si disponibilidad > 0 Entonces
+		disponibilidad <- disponibilidad - 1;
+		escribir "Puede ingresar, hay parqueadero disponible";
+		Escribir "";
+	SiNo
+		escribir "No hay parqueaderos disponibles";
+		Escribir "";
+	FinSi
+FinSubProceso
+
+SubProceso disponibilidad <- SalidaVehiculo(disponibilidad)
+	definir autosOut, confirm Como Caracter;
+	Escribir "SALIDA DE VEHÍCULO";
+	Escribir "Ingrese nombre, teléfono del cliente o placa del vehiculo:";
+	leer autosOut;
+	escribir "Confirmar salida, presione ENTER";
+	leer confirm;
+	Escribir "Salió";
+	si disponibilidad < 5 Entonces
+		disponibilidad <- disponibilidad + 1;
+	FinSi
+	Limpiar Pantalla;
+	Escribir "Parqueaderos disponibles: ", disponibilidad;
+FinSubProceso
+
+SubProceso ConsultaVehiculo()
+	definir autosIn, confirm Como Caracter;
+	definir consulta Como Entero;
+	Escribir "CONSULTA DE VEHÍCULO";
+	Escribir "Ingrese nombre del cliente:";
+	leer autosIn;
+	Limpiar Pantalla;
+	consulta <- Aleatorio(0, 1);
+	si consulta = 1 Entonces
+		Escribir "El auto de ", autosIn, " se encuentra en el parqueadero";
+	SiNo
+		Escribir "El auto de ", autosIn, " no se encuentra en el parqueadero";
+	FinSi
+	Escribir "";
+	Escribir "Presione ENTER para continuar";
+	leer confirm;
+	Limpiar Pantalla;
+FinSubProceso
+
+Proceso ciclos7
+	definir disponibilidad Como Entero;
+	definir opcion Como Entero;
+	
+	disponibilidad <- 5;
+	Repetir
+		Menu();
+		leer opcion;
+		Limpiar Pantalla;
+		
+		Segun opcion hacer
+			1:
+				disponibilidad <- IngresoVehiculo(disponibilidad);
+				
+			2:
+				disponibilidad <- SalidaVehiculo(disponibilidad);
+			3:
+				ConsultaVehiculo();
+		FinSegun
+		
+	Hasta Que opcion = 0;
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/ciclos/funcionCiclos7.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThreec">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreec" aria-expanded="false" aria-controls="collapseThreec">
+                Función Punto #8 del Taller de Ciclos
+                </button>
+            </h2>
+            <div id="collapseThreec" class="accordion-collapse collapse" aria-labelledby="headingThreec" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y 
+                        establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar 
+                        su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el 
+                        sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</strong> 
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+SubProceso Menu()
+	escribir "ESCUELA AUTOMOVILÍSTICA EL MAESTRO";
+	escribir "1. Ingresa al curso";
+	escribir "2. Consultar usuario";
+	escribir "3. Resultados del curso";
+	escribir "0. Salir";
+	escribir "";
+	escribir "Ingresa una opción:";
+FinSubProceso
+
+SubProceso numberUser <- RegistroUsuario(numberUser)
+	definir usuario, confirm como caracter;
+	si numberUser < 8 Entonces
+		escribir "Registra tu ingreso al curso";
+		Escribir "Usuarios actuales: ", numberUser;
+		escribir "Escribe un usuario:";
+		leer usuario;
+		si usuario <> "" Entonces
+			numberUser <- numberUser + 1;
+			Escribir "Usuario creado con éxito";
+			Escribir "Presiona ENTER para confirmar";
+			leer confirm;
+			Limpiar Pantalla;
+		SiNo
+			Escribir "No se ha registrado el usuario";
+			Escribir "Presiona ENTER para continuar";
+			leer confirm;
+			Limpiar Pantalla;
+		FinSi
+	SiNo
+		Escribir "No se puede generar el usuario, debe de esperar que los otros usuarios gestionen su licencia o finalicen el curso";
+		Escribir "Usuarios actuales: ", numberUser;
+		escribir "Presione ENTER para continuar";
+		leer confirm;
+		Limpiar Pantalla;
+	FinSi
+FinSubProceso
+
+SubProceso ConsultaUsuario()
+	definir usuario, confirm Como Caracter;
+	escribir "Consultar usuario";
+	escribir "Ingresa usuario:";
+	leer usuario;
+	escribir "El usuario se encuentra en nuestra base de datos, un correo con su información ha sido enviado";
+	Escribir "Presiona ENTER para continuar";
+	leer confirm;
+	Limpiar Pantalla;
+FinSubProceso
+
+SubProceso ResultadosCurso()
+	definir usuario, confirm Como Caracter;
+	Escribir "Consulta de resultados";
+	escribir "Ingresa usuario:";
+	leer usuario;
+	Escribir "El estado de aprobación del curso ha sido enviado al correo personal del usuario";
+	Escribir "Presione ENTER para continuar";
+	leer confirm;
+	Limpiar Pantalla;
+FinSubProceso
+
+Proceso ciclos8
+	definir numberUser Como Entero;
+	definir opcion Como Entero;
+	
+	numberUser <- 0;
+	Repetir
+		Menu();
+		leer opcion;
+		Limpiar Pantalla;
+		segun opcion hacer
+			1:
+				numberUser <- RegistroUsuario(numberUser);
+			2:
+				ConsultaUsuario();
+			3:
+				ResultadosCurso();
+			0:
+				escribir "Salió del sistema";
+				
+		FinSegun
+		
+	Hasta Que opcion = 0;
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/ciclos/funcionCiclos8.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+<!-------------------FIN ACCORDION TALLER DE CICLOS-------------------------------------->
+
+    <strong>
+        3. Organizar todos los puntos del taller de arreglos en modo funciones. <br>
+        <hr>
+    </strong>
+
+<!-------------------INICIO ACCORDION TALLER DE ARREGLOS-------------------------------------->
+
+    <div class="accordion" id="accordionExamplea">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOnea">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnea" aria-expanded="false" aria-controls="collapseOnea">
+                Función Punto #1 del Taller de Arreglos
+                </button>
+            </h2>
+            <div id="collapseOnea" class="accordion-collapse collapse" aria-labelledby="headingOnea" data-bs-parent="#accordionExamplea">
+                <div class="accordion-body">
+                    <strong>Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, 
+                        se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</strong>
+    <pre>
+    [0] = 55
+    [1] = 99
+    [2] = 11
+    [3] = 56
+    [4] = 69
+    </pre>
+                    <hr>
+    <!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+SubProceso Vector()
+	definir numbers Como Entero;
+	definir i Como Entero;
+	Dimension numbers[5];
+	
+	Escribir "Deberás ingresar 5 números enteros";
+	Para i <- 0 Hasta 5-1 Con Paso 1 Hacer
+		escribir "Ingresa un número entero:";
+		leer numbers[i];
+		Limpiar Pantalla;
+	FinPara
+	
+	para i <- 0 hasta 5-1 Con Paso 1 Hacer
+		Escribir "[", i, "] = ", numbers[i];
+	FinPara
+FinSubProceso
+
+Proceso arreglos1
+	Vector();
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/arreglos/funcionArreglos1.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwoa">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwoa">
+                    Función Punto #2 del Taller de Arreglos
+                </button>
+            </h2>
+            <div id="collapseTwoa" class="accordion-collapse collapse" aria-labelledby="headingTwoa" data-bs-parent="#accordionExamplea">
+                <div class="accordion-body">
+                    <strong>Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; 
+                        después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse
+                        e imprimir los números pares e impares.</strong>
+                    <hr>
+    <!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+SubProceso ImprimirNumerosAleatorios()
+	definir numbers Como Entero;
+	definir i Como Entero;
+	
+	Dimension numbers[20];
+	
+	i <- 0;
+	Mientras i < 20 Hacer
+		numbers[i] <- Aleatorio(1, 100);
+		i <- i + 1;
+	FinMientras
+	
+	i <- 0;
+	Mientras i < 20 Hacer
+		Escribir "[", i, "] = ", numbers[i];
+		i <- i + 1;
+	FinMientras
+FinSubProceso
+
+Proceso arreglos2
+	ImprimirNumerosAleatorios();
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/arreglos/funcionArreglos2.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThreea">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreea" aria-expanded="false" aria-controls="collapseThreea">
+                    Función Punto #3 del Taller de Arreglos
+                </button>
+            </h2>
+            <div id="collapseThreea" class="accordion-collapse collapse" aria-labelledby="headingThreea" data-bs-parent="#accordionExamplea">
+                <div class="accordion-body">
+                    <strong>Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</strong> 
+                    <hr>
+    <!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso arreglos3
+	NumerosPrimos(1, 1000);
+FinProceso
+
+SubProceso NumerosPrimos(numMenor, NumMayor)//NumMenor y NumMayor son el límite del rango de números primos, desde donde hasta donde.
+	definir number, divisor, contador Como Entero;
+	
+	para number <- numMenor Hasta NumMayor Con Paso 1 Hacer
+		divisor <- 1;
+		contador <- 0;
+		Mientras divisor <= number Hacer
+			si number MOD divisor = 0 Entonces
+				contador <- contador + 1;
+			FinSi
+			divisor <- divisor + 1;
+		FinMientras
+		si contador = 2 Entonces
+			Escribir "El número ", number, " es primo";
+		FinSi
+	FinPara
+FinSubProceso
+ </pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/arreglos/funcionArreglos3.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFoura">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFoura" aria-expanded="false" aria-controls="collapseFoura">
+                    Función Punto #4 del Taller de Arreglos
+                </button>
+            </h2>
+            <div id="collapseFoura" class="accordion-collapse collapse" aria-labelledby="headingFoura" data-bs-parent="#accordionExamplea">
+                <div class="accordion-body">
+                    <strong>Dada la siguiente matriz bidimensional, el cual debe de quemar en el código <br> 
+                    01 02 03 04 05 <br> 
+                    06 07 08 09 10 <br>
+                    11 12 13 14 15 <br>
+                    16 17 18 19 20 <br>
+                    Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.
+                    01 02 03 04 05 <br> 
+                    10 09 08 07 06 <br>
+                    11 12 13 14 15 <br>
+                    20 19 18 17 16 <br></strong> 
+
+<pre>
+Proceso arreglos4
+	InvertirMatrizQuemada();
+FinProceso
+
+SubProceso InvertirMatrizQuemada()
+	definir matriz, fila, columna Como Entero;
+	Dimension matriz[4, 5];
+	
+	matriz[0,0] <- 01;
+	matriz[0,1] <- 02;
+	matriz[0,2] <- 03;
+	matriz[0,3] <- 04;
+	matriz[0,4] <- 05;
+	matriz[1,0] <- 06;
+	matriz[1,1] <- 07;
+	matriz[1,2] <- 08;
+	matriz[1,3] <- 09;
+	matriz[1,4] <- 10;
+	matriz[2,0] <- 11;
+	matriz[2,1] <- 12;
+	matriz[2,2] <- 13;
+	matriz[2,3] <- 14;
+	matriz[2,4] <- 15;
+	matriz[3,0] <- 16;
+	matriz[3,1] <- 17;
+	matriz[3,2] <- 18;
+	matriz[3,3] <- 19;
+	matriz[3,4] <- 20;
+	
+	para fila <- 0 Hasta 3 Con Paso 1 Hacer
+		si fila = 0 O fila = 2 Entonces
+			para columna <- 0 Hasta 4 Con Paso 1 Hacer
+				escribir matriz[fila, columna], " " Sin Saltar;
+			FinPara
+		SiNo
+			para columna <- 4 Hasta 0 Con Paso -1 Hacer
+				Escribir matriz[fila, columna], " " sin saltar;
+			FinPara
+		FinSi
+		Escribir " ";
+	FinPara
+FinSubProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/arreglos/funcionArreglos4.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFivea">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFivea" aria-expanded="false" aria-controls="collapseFivea">
+                    Función Punto #5 del Taller de Arreglos
+                </button>
+            </h2>
+            <div id="collapseFivea" class="accordion-collapse collapse" aria-labelledby="headingFivea" data-bs-parent="#accordionExamplea">
+                <div class="accordion-body">
+                    <strong>Se debe de imprimir el siguiente cuadro</strong> <br>
+                    <img src="../archivosTalleres/tablasMultiplicar.png" alt="Tablas de multiplicar"> <br>
+                    <strong>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado 
+                        en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</strong>
+<pre>
+Proceso arreglos5
+	TablaMultiplicar();
+FinProceso
+
+SubProceso TablaMultiplicar()
+	Definir fila, columna Como Entero;
+	definir numFila, numCol, resultado Como Entero;
+	definir confirm Como Caracter;
+	
+	Dimension resultado[10,10];
+	
+	Repetir
+		para fila <- 0 Hasta 10-1 Con Paso 1 Hacer
+			para columna <- 0 Hasta 10-1 Con Paso 1 Hacer
+				resultado[fila, columna] <- fila * columna;
+				Escribir fila, " x ", columna, " | " Sin Saltar;
+			FinPara
+			Escribir " ";
+		FinPara
+		
+		Escribir "Ingresa el número de fila y el número de columna del que quieres ver resultado";
+		Escribir "Número de fila o número (del 0 al 9) que quieres multiplicar:" Sin Saltar;
+		leer numFila;
+		Escribir "Número de columna o número (del 0 al 9) que quieres multiplicar:" Sin Saltar;
+		leer numCol;
+		Escribir "";
+		Escribir resultado[numFila, numCol];
+		Escribir "";
+		Escribir "ENTER para confirmar y volver al inicio o escribe: salir, para cerrar";
+		leer confirm;
+		Limpiar Pantalla;
+	Hasta Que confirm = "salir";
+FinSubProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller5/taller5Funciones/arreglos/funcionArreglos5.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------------------FIN ACCORDION TALLER DE ARREGLOS-------------------------------------->
+<hr>
+
+<!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

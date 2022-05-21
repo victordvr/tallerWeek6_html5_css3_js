@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/portafolioStyle.css">
+    <script defer src="../js/portafolioScript.js"></script>
+    <title>PSeInt1 Variables e Impresiones</title>
+</head>
+<body class="container">
+    <!------------INICIA NAVBAR------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="java.html">JAVA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt1.html">PSeInt1: Variables e Impresión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt2.html">PSeInt2: Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt3.html">PSeInt3: Ciclos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt4.html">PSeInt4: Arreglos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt5.html">PSeInt5: Funciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../index.html">MI HOJA DE VIDA</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!--------------FIN NAVBAR-------------->
+    <h1>Variables e impresiones</h1>
+    <!--------------INICIA ACCORDION---------------->
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Punto #1
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa el cual solicite su nombre y apellidos.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso variablesImpresion1
+	
+    definir nombre Como Caracter;
+    definir apellidos Como Caracter;
+                            
+    escribir "Ingrese su nombre";
+    leer nombre;
+                            
+    escribir "Ingrese sus apellidos";
+    leer apellidos;
+                            
+    Limpiar Pantalla;
+    escribir "Hola, ", nombre, " ", apellidos;
+                        
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller1/taller1VariablesImpresion/variablesImpresion1.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Punto #2
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso variablesImpresion2
+	
+	definir nombre, apellidos Como Caracter;
+	definir edad Como Entero;
+	definir estatura Como Real;
+	
+	escribir "Ingrese su nombre:";
+	leer nombre;
+	escribir "Ingrese sus apellidos:";
+	leer apellidos;
+	escribir "¿Qué edad tienes?";
+	leer edad;
+	escribir "¿Cuál es tu estatura?";
+	leer estatura;
+	
+	Limpiar Pantalla;
+	escribir "Hola ", nombre;
+	escribir "Sabemos que tienes ", edad, " años y mides ", estatura, " metros";
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller1/taller1VariablesImpresion/variablesImpresion2.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Punto #3
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</strong> 
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso variablesImpresion3
+	
+	definir nombre, apellidos Como Caracter;
+	definir nombreMadre, apellidosMadre Como Caracter;
+	definir nombrePadre, apellidosPadre Como Caracter;
+	//datos personales
+	escribir "Ingrese su nombre:";
+	leer nombre;
+	escribir "Ingrese sus apellidos:";
+	leer apellidos;
+	Limpiar Pantalla;
+	//datos madre
+	escribir "Ingrese el nombre de su madre:";
+	leer nombreMadre;
+	escribir "Ingrese los apellidos de su madre:";
+	leer apellidosMadre;
+	Limpiar Pantalla;
+	//datos padre
+	escribir "Ingrese el nombre de su padre:";
+	leer nombrePadre;
+	escribir "Ingrese los apellidos de su padre:";
+	leer apellidosPadre;
+	Limpiar Pantalla;
+	
+	escribir "Yo ", nombre, " ", apellidos, ", soy hijo de ", nombreMadre, " ", apellidosMadre, " y ", nombrePadre, " ", apellidosPadre;
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller1/taller1VariablesImpresion/variablesImpresion3.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Punto #4
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</strong> 
+<pre>
+Proceso variablesImpresion4
+	
+	definir capital, pais Como Caracter;
+	
+	escribir "Ingrese la ciudad Capital de un país:";
+	leer capital;
+	escribir "Ahora, ingrese el país respectivo de la capital anterior:";
+	leer pais;
+	Limpiar Pantalla;
+	
+	escribir "La ciudad ", capital, ", es la capital del país ", pais;
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller1/taller1VariablesImpresion/variablesImpresion4.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Punto #5
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</strong>
+<pre>
+Proceso variablesImpresion5
+	
+	definir namePet, pet Como Caracter;
+	definir agePet Como Entero;
+	definir name Como Caracter;
+	
+	escribir "Ingrese el nombre de su mascota:";
+	leer namePet;
+	escribir "¿Cuál es la edad de ", namePet, "?";
+	leer agePet;
+	escribir "¿Cuál animal es ", namePet, "?";
+	leer pet;
+	escribir "Por último, ingresa tu nombre completo:";
+	leer name;
+	Limpiar Pantalla;
+	
+	escribir namePet, " es un ", pet, " el cual, tiene ", agePet, " años de edad y ", name, " es actualmente su dueño(a)";
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller1/taller1VariablesImpresion/variablesImpresion5.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------FIN ACCORDION---------------->
+
+
+<!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

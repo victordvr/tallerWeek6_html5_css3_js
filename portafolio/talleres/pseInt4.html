@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/portafolioStyle.css">
+    <script defer src="../js/portafolioScript.js"></script>
+    <title>PSeInt4 Arreglos</title>
+</head>
+<body class="container">
+    <!------------INICIA NAVBAR------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="java.html">JAVA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt1.html">PSeInt1: Variables e Impresión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt2.html">PSeInt2: Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt3.html">PSeInt3: Ciclos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt4.html">PSeInt4: Arreglos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pseInt5.html">PSeInt5: Funciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../index.html">MI HOJA DE VIDA</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!--------------FIN NAVBAR-------------->
+    <h1>Arreglos</h1>
+<!--------------INICIA ACCORDION---------------->
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Punto #1
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, 
+                        se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</strong>
+<pre>
+[0] = 55
+[1] = 99
+[2] = 11
+[3] = 56
+[4] = 69
+</pre>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso arreglos1
+	
+	definir numbers Como Entero;
+	definir i Como Entero;
+	
+	Dimension numbers[5];
+	
+	Escribir "Deberás ingresar 5 números enteros";
+	Para i <- 0 Hasta 5-1 Con Paso 1 Hacer
+		escribir "Ingresa un número entero:";
+		leer numbers[i];
+		Limpiar Pantalla;
+	FinPara
+	
+	para i <- 0 hasta 5-1 Con Paso 1 Hacer
+		Escribir "[", i, "] = ", numbers[i];
+	FinPara
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller4/taller4Arreglos/arreglos1.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Punto #2
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; 
+                        después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse
+                         e imprimir los números pares e impares.</strong>
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso arreglos2
+	
+	definir numbers Como Entero;
+	definir i Como Entero;
+	
+	Dimension numbers[20];
+	
+	i <- 0;
+	Mientras i < 20 Hacer
+		numbers[i] <- Aleatorio(1, 100);
+		i <- i + 1;
+	FinMientras
+	
+	i <- 0;
+	Mientras i < 20 Hacer
+		Escribir "[", i, "] = ", numbers[i];
+		i <- i + 1;
+	FinMientras
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller4/taller4Arreglos/arreglos2.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Punto #3
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</strong> 
+                    <hr>
+<!--pongo la identacion asi porque quiero conservar el formato en el cual pongo el codigo del PSeInt-->
+<pre>
+Proceso arreglos3
+	definir number, divisor, contador Como Entero;
+	
+	para number <- 1 Hasta 1000 Con Paso 1 Hacer
+		divisor <- 1;
+		contador <- 0;
+		Mientras divisor <= number Hacer
+			si number MOD divisor = 0 Entonces
+				contador <- contador + 1;
+			FinSi
+			divisor <- divisor + 1;
+		FinMientras
+		si contador = 2 Entonces
+			Escribir "El número ", number, " es primo";
+		FinSi
+	FinPara
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller4/taller4Arreglos/arreglos3.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Punto #4
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Dada la siguiente matriz bidimensional, el cual debe de quemar en el código <br> 
+                    01 02 03 04 05 <br> 
+                    06 07 08 09 10 <br>
+                    11 12 13 14 15 <br>
+                    16 17 18 19 20 <br>
+                    Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.
+                    01 02 03 04 05 <br> 
+                    10 09 08 07 06 <br>
+                    11 12 13 14 15 <br>
+                    20 19 18 17 16 <br></strong> 
+
+<pre>
+
+Proceso arreglos4
+	
+	definir matriz, fila, columna Como Entero;
+	Dimension matriz[4, 5];
+	
+	matriz[0,0] <- 01;
+	matriz[0,1] <- 02;
+	matriz[0,2] <- 03;
+	matriz[0,3] <- 04;
+	matriz[0,4] <- 05;
+	matriz[1,0] <- 06;
+	matriz[1,1] <- 07;
+	matriz[1,2] <- 08;
+	matriz[1,3] <- 09;
+	matriz[1,4] <- 10;
+	matriz[2,0] <- 11;
+	matriz[2,1] <- 12;
+	matriz[2,2] <- 13;
+	matriz[2,3] <- 14;
+	matriz[2,4] <- 15;
+	matriz[3,0] <- 16;
+	matriz[3,1] <- 17;
+	matriz[3,2] <- 18;
+	matriz[3,3] <- 19;
+	matriz[3,4] <- 20;
+	
+	para fila <- 0 Hasta 3 Con Paso 1 Hacer
+		si fila = 0 O fila = 2 Entonces
+			para columna <- 0 Hasta 4 Con Paso 1 Hacer
+				escribir matriz[fila, columna], " " Sin Saltar;
+			FinPara
+		SiNo
+			para columna <- 4 Hasta 0 Con Paso -1 Hacer
+				Escribir matriz[fila, columna], " " sin saltar;
+			FinPara
+		FinSi
+		Escribir " ";
+	FinPara
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller4/taller4Arreglos/arreglos4.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Punto #5
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Se debe de imprimir el siguiente cuadro</strong> <br>
+                    <img src="../archivosTalleres/tablasMultiplicar.png" alt="Tablas de multiplicar"> <br>
+                    <strong>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado 
+                        en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</strong>
+<pre>
+
+Proceso arreglos5
+	
+	Definir fila, columna Como Entero;
+	definir numFila, numCol, resultado Como Entero;
+	definir confirm Como Caracter;
+	
+	Dimension resultado[10,10];
+	
+	Repetir
+		para fila <- 0 Hasta 10-1 Con Paso 1 Hacer
+			para columna <- 0 Hasta 10-1 Con Paso 1 Hacer
+				resultado[fila, columna] <- fila * columna;
+				Escribir fila, " x ", columna, " | " Sin Saltar;
+			FinPara
+			Escribir " ";
+		FinPara
+		
+		Escribir "Ingresa el número de fila y el número de columna del que quieres ver resultado";
+		Escribir "Número de fila o número (del 0 al 9) que quieres multiplicar:" Sin Saltar;
+		leer numFila;
+		Escribir "Número de columna o número (del 0 al 9) que quieres multiplicar:" Sin Saltar;
+		leer numCol;
+		Escribir "";
+		Escribir resultado[numFila, numCol];
+		Escribir "";
+		Escribir "ENTER para confirmar y volver al inicio o escribe: salir, para cerrar";
+		leer confirm;
+		Limpiar Pantalla;
+	Hasta Que confirm = "salir";
+	
+FinProceso
+</pre>
+                    <hr>
+                    <a href="https://github.com/victordvr/learningPSeint/blob/taller4/taller4Arreglos/arreglos5.psc" target="_blank">GitHub del ejercicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------------FIN ACCORDION---------------->
+
+
+<!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
